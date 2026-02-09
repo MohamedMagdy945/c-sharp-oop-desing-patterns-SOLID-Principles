@@ -80,15 +80,15 @@ namespace Architecture.src
             //}
             #endregion
             #region Coupling
-            // wrong way 
-            Order order = new Order();
-            order.BadPlaceOrder();
+            //// wrong way 
+            //Order order = new Order();
+            //order.BadPlaceOrder();
 
-            // correct way
-            Order order1 = new Order(new MailService());
-            order1.PlaceOrder();
-            Order order2 = new Order(new SmsService());
-            order2.PlaceOrder();
+            //// correct way
+            //Order order1 = new Order(new MailService());
+            //order1.PlaceOrder(); // email service
+            //Order order2 = new Order(new SmsService());
+            //order2.PlaceOrder(); // sms service
             #endregion
 
         }
