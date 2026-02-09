@@ -1,5 +1,6 @@
 ﻿using Architecture.src.OOPPrinciples.Abstraction;
 using Architecture.src.OOPPrinciples.Encapsulation;
+using Architecture.src.OOPPrinciples.Inheritance;
 
 namespace Architecture.src
 {
@@ -31,6 +32,20 @@ namespace Architecture.src
             //// correct way
             //EmailService emailService = new EmailService();
             //emailService.SendEmail();
+            #endregion
+            #region Inheritance
+            Car car = new Car();
+            // shared fields
+            car.Brand = "Ford";
+            car.Start();
+            car.Stop();
+
+            // uniqu fields
+            car.NumberOfDoors = 4;
+            
+            Bike bike = new Bike();
+            bike.Start();
+            bike.Stop();
             #endregion
 
         }
