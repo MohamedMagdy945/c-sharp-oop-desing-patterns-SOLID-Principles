@@ -1,4 +1,5 @@
 ﻿using Architecture.src.OOPPrinciples.Abstraction;
+using Architecture.src.OOPPrinciples.Composition;
 using Architecture.src.OOPPrinciples.Coupling;
 using Architecture.src.OOPPrinciples.Encapsulation;
 using Architecture.src.OOPPrinciples.Inheritance;
@@ -90,7 +91,12 @@ namespace Architecture.src
             //Order order2 = new Order(new SmsService());
             //order2.PlaceOrder(); // sms service
             #endregion
+            #region Composition
+            //Motorcar motorcar = new Motorcar();
+            //motorcar.MoveCar();
+            #endregion
 
         }
     }
 }
+ 
