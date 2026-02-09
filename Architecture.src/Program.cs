@@ -11,6 +11,7 @@ namespace Architecture.src
     {
         static void Main(string[] args)
         {
+            #region OOP Principles
             #region Encapsulation
             //// wrong way
             //BadBankAccount badAccount = new BadBankAccount();
@@ -95,7 +96,7 @@ namespace Architecture.src
             //Motorcar motorcar = new Motorcar();
             //motorcar.MoveCar();
             #endregion
-
+            #endregion
         }
     }
 }
