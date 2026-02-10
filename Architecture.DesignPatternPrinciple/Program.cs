@@ -1,4 +1,5 @@
 ﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 
 namespace Architecture.DesignPatternPrinciple
 {
@@ -30,6 +31,12 @@ namespace Architecture.DesignPatternPrinciple
             //originator.RestorState(caretaker.GetMemento(0));
             //Console.WriteLine("---------------------");
             //Console.WriteLine(originator.Content);
+            #endregion
+            #region State Patterns
+            Phone phone = new Phone(new SilentState());
+            phone.ChangeMode();
+            phone.ChangeMode();
+            phone.ChangeMode();
             #endregion
             #endregion
 
