@@ -1,6 +1,8 @@
-﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
+﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Architecture.DesignPatternPrinciple
 {
@@ -19,6 +21,7 @@ namespace Architecture.DesignPatternPrinciple
 
             #endregion
             #region Behavioral Patterns
+
             #region Memento Pattern
             //Caretaker caretaker = new Caretaker();
             //Originator originator = new Originator();
@@ -33,18 +36,29 @@ namespace Architecture.DesignPatternPrinciple
             //Console.WriteLine("---------------------");
             //Console.WriteLine(originator.Content);
             #endregion
-            #region State Patterns
+
+            #region State Pattern
             //Phone phone = new Phone(new SilentState());
             //phone.ChangeMode();
             //phone.ChangeMode();
             //phone.ChangeMode();
             #endregion
-            #region Strategy Pattern
-            var payContext = new PaymentContext(new VisaPayment());
-            payContext.Pay(100);
 
-            payContext.SetStrategy(new PaypalPayment());
-            payContext.Pay(200);
+            #region Strategy Pattern
+            //var payContext = new PaymentContext(new VisaPayment());
+            //payContext.Pay(100);
+
+            //payContext.SetStrategy(new PaypalPayment());
+            //payContext.Pay(200);
+            #endregion
+
+            #region Iterator Pattern 
+            List<string> name = new List<string>() { "Mohamed" , "Ahmed", "Mahmoud"};
+            MyIterator<string> nameIteratro = new MyIterator<string>(name);
+            while(nameIteratro.MoveNext())
+            {
+                Console.WriteLine(nameIteratro.Current);
+            }
             #endregion
             #endregion
 
