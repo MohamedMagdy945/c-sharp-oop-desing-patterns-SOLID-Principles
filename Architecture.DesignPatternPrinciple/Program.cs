@@ -1,6 +1,7 @@
 ﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.CommandPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.ObserverPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
@@ -80,21 +81,23 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Template Method Pattern
-            Beverage tea = new Tea();
-            tea.Prepare();
+            //Beverage tea = new Tea();
+            //tea.Prepare();
 
-            Beverage coffee = new Coffee();
-            coffee.Prepare();
-
-            #endregion
-
-            #region Mediator Pattern
+            //Beverage coffee = new Coffee();
+            //coffee.Prepare();
             #endregion
 
             #region Observer Pattern
+            NewsChannel channel = new NewsChannel();
+            Subscriber ahmed = new Subscriber("ahmed");
+            Subscriber sara = new Subscriber("Sara");
+            channel.Subscribe(ahmed);
+            channel.Subscribe(sara);
+            channel.PublishNews("New video uploaded!");
             #endregion
 
-            #region Command Pattern
+            #region Mediator Pattern
             #endregion
 
             #region Chain of Responsibility Pattern
