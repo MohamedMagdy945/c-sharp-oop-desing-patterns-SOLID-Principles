@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="Architecture.DesignPatternPrinciple/Architecture.DesignPatternPrinciple.csproj" />
   <Project Path="Architecture.src/Architecture.src.csproj" />
 </Solution>

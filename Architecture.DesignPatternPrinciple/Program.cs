@@ -1,0 +1,39 @@
+﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
+
+namespace Architecture.DesignPatternPrinciple
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            #region Design Pattern Principles
+
+            #region Creational Design Patterns  
+            #endregion
+
+            #region Structural Patterns
+
+
+
+            #endregion
+            #region Behavioral Patterns
+            #region Memento Pattern
+            //Caretaker caretaker = new Caretaker();
+            //Originator originator = new Originator();
+            //originator.Content = "state1";
+            //caretaker.AddMemento(originator.SaveState());
+
+            //originator.Content = "state2";
+            //caretaker.AddMemento(originator.SaveState());
+
+            //caretaker.ShowHistory();
+            //originator.RestorState(caretaker.GetMemento(0));
+            //Console.WriteLine("---------------------");
+            //Console.WriteLine(originator.Content);
+            #endregion
+            #endregion
+
+            #endregion
+        }
+    }
+}
