@@ -3,6 +3,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPatte
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Architecture.DesignPatternPrinciple
@@ -63,19 +64,42 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Command Pattern
-            Light light = new Light();
-            TurnOnCommand turnOn = new TurnOnCommand(light);
-            TurnOffCommand turnOff = new TurnOffCommand(light);
+            //Light light = new Light();
+            //TurnOnCommand turnOn = new TurnOnCommand(light);
+            //TurnOffCommand turnOff = new TurnOffCommand(light);
 
-            RemoteControl remoteControl = new RemoteControl();
-            remoteControl.SetCommand(turnOn);
+            //RemoteControl remoteControl = new RemoteControl();
 
-            remoteControl.PressButton();
-            remoteControl.PressUndo();
-            remoteControl.SetCommand(turnOff);
-            remoteControl.PressButton();
-            remoteControl.PressUndo();
+            //remoteControl.SetCommand(turnOn);
+            //remoteControl.PressButton();
+            //remoteControl.PressUndo();
+
+            //remoteControl.SetCommand(turnOff);
+            //remoteControl.PressButton();
+            //remoteControl.PressUndo();
             #endregion
+
+            #region Template Method Pattern
+            Beverage tea = new Tea();
+            tea.Prepare();
+
+            Beverage coffee = new Coffee();
+            coffee.Prepare();
+
+            #endregion
+
+            #region Mediator Pattern
+            #endregion
+
+            #region Observer Pattern
+            #endregion
+
+            #region Command Pattern
+            #endregion
+
+            #region Chain of Responsibility Pattern
+            #endregion
+
             #endregion
 
             #endregion
