@@ -1,4 +1,5 @@
-﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPattern;
+﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.CommandPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
@@ -53,12 +54,27 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Iterator Pattern 
-            List<string> name = new List<string>() { "Mohamed" , "Ahmed", "Mahmoud"};
-            MyIterator<string> nameIteratro = new MyIterator<string>(name);
-            while(nameIteratro.MoveNext())
-            {
-                Console.WriteLine(nameIteratro.Current);
-            }
+            //List<string> name = new List<string>() { "Mohamed" , "Ahmed", "Mahmoud"};
+            //MyIterator<string> nameIteratro = new MyIterator<string>(name);
+            //while(nameIteratro.MoveNext())
+            //{
+            //    Console.WriteLine(nameIteratro.Current);
+            //}
+            #endregion
+
+            #region Command Pattern
+            Light light = new Light();
+            TurnOnCommand turnOn = new TurnOnCommand(light);
+            TurnOffCommand turnOff = new TurnOffCommand(light);
+
+            RemoteControl remoteControl = new RemoteControl();
+            remoteControl.SetCommand(turnOn);
+
+            remoteControl.PressButton();
+            remoteControl.PressUndo();
+            remoteControl.SetCommand(turnOff);
+            remoteControl.PressButton();
+            remoteControl.PressUndo();
             #endregion
             #endregion
 
