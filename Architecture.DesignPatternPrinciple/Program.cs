@@ -29,7 +29,6 @@ namespace Architecture.DesignPatternPrinciple
 
             #endregion
 
-
             #region Behavioral Patterns
 
             #region Memento Pattern
@@ -140,9 +139,9 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region InterpreterPattern
-            //15 + 1 + 2 - 8 = 10
-            IExpression expression = new SubExpression(new AddExpression(new AddExpression(new NumberExpression(15), new NumberExpression(1)), new NumberExpression(2)), new NumberExpression(8));
-            Console.WriteLine(expression.Interpret()); // 10
+            ////15 + 1 + 2 - 8 = 10
+            //IExpression expression = new SubExpression(new AddExpression(new AddExpression(new NumberExpression(15), new NumberExpression(1)), new NumberExpression(2)), new NumberExpression(8));
+            //Console.WriteLine(expression.Interpret()); // 10
             #endregion
 
             #endregion
