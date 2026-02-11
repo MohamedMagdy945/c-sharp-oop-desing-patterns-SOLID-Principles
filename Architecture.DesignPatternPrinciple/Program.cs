@@ -1,4 +1,5 @@
-﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.CommandPattern;
+﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.ChainOfResposibilityPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.CommandPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MediatorPatttern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
@@ -6,6 +7,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.ObserverPatte
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Architecture.DesignPatternPrinciple
@@ -24,6 +26,8 @@ namespace Architecture.DesignPatternPrinciple
 
 
             #endregion
+
+
             #region Behavioral Patterns
 
             #region Memento Pattern
@@ -99,17 +103,25 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Mediator Pattern
-            ConcreteMediator mediator = new ConcreteMediator();
-            Button btn = new Button(mediator);
-            TextBox txt = new TextBox(mediator);
-            mediator.Button = btn;
-            mediator.TextBox = txt;
-            txt.Value = "mohamed";
-            btn.Click(); 
-            btn.Click();
+            //ConcreteMediator mediator = new ConcreteMediator();
+            //Button btn = new Button(mediator);
+            //TextBox txt = new TextBox(mediator);
+            //mediator.Button = btn;
+            //mediator.TextBox = txt;
+            //txt.Value = "mohamed";
+            //btn.Click(); 
+            //btn.Click();
             #endregion
 
             #region Chain of Responsibility Pattern
+            //var manager = new Manager();
+            //var director = new Director();
+            //var ceo = new CEO();
+
+            //manager.SetNext(director);
+            //director.SetNext(ceo);
+
+            //manager.Handle(7000);
             #endregion
 
             #endregion
