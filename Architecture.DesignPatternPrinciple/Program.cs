@@ -1,5 +1,6 @@
 ﻿using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.ChainOfResposibilityPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.CommandPattern;
+using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.InterpreterPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.IteratorPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MediatorPatttern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.MementoPattern;
@@ -9,6 +10,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPatte
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
 using System.Security.Cryptography.X509Certificates;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Architecture.DesignPatternPrinciple
 {
@@ -122,6 +124,25 @@ namespace Architecture.DesignPatternPrinciple
             //director.SetNext(ceo);
 
             //manager.Handle(7000);
+            #endregion
+
+            #region Visitor Pattern
+            //AreaVisitor areaVisitor = new AreaVisitor();
+            //List<IShape> shapes = new List<IShape>();
+            //Circle circle = new Circle() { Radius = 2};
+            //Rectangle rectangle = new Rectangle() { Height = 10 , Width = 5};
+            //shapes.Add(circle);
+            //shapes.Add(rectangle);
+            //foreach (IShape shape in shapes)
+            //{
+            //    shape.Accept(areaVisitor);
+            //}
+            #endregion
+
+            #region InterpreterPattern
+            //15 + 1 + 2 - 8 = 10
+            IExpression expression = new SubExpression(new AddExpression(new AddExpression(new NumberExpression(15), new NumberExpression(1)), new NumberExpression(2)), new NumberExpression(8));
+            Console.WriteLine(expression.Interpret()); // 10
             #endregion
 
             #endregion
