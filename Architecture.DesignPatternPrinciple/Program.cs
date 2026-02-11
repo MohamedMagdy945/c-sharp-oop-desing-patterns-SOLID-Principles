@@ -9,9 +9,8 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
+using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
-using System.Security.Cryptography.X509Certificates;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Architecture.DesignPatternPrinciple
 {
@@ -26,18 +25,24 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Structural Design Patterns
 
-            #region CompositPattern
-            FolderSystem root = new FolderSystem("Root");
-            FileSystem file1 = new FileSystem("file1.txt");
-            FileSystem file2 = new FileSystem("file2.txt");
-            FolderSystem subFolder = new FolderSystem("SubFolder");
-            FileSystem file3 = new FileSystem("File3.txt");
+            #region Composit Pattern
+            //FolderSystem root = new FolderSystem("Root");
+            //FileSystem file1 = new FileSystem("file1.txt");
+            //FileSystem file2 = new FileSystem("file2.txt");
+            //FolderSystem subFolder = new FolderSystem("SubFolder");
+            //FileSystem file3 = new FileSystem("File3.txt");
 
-            root.Add(file1);
-            root.Add(subFolder);
-            subFolder.Add(file2);
-            subFolder.Add(file3);
-            root.Display(0);
+            //root.Add(file1);
+            //root.Add(subFolder);
+            //subFolder.Add(file2);
+            //subFolder.Add(file3);
+            //root.Display(0);
+            #endregion
+
+            #region Adaptor Pattern
+            OldPaymentSystem oldSystem = new OldPaymentSystem();
+            IPayment payment = new PaymentAdapter(oldSystem);
+            payment.Pay(100);
             #endregion
 
             #endregion
