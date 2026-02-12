@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Creational Design Patterns\PrototypePattern\User.cs" />
+    <None Include="CreationalDesignPatterns\PrototypePattern\User.cs" />
   </ItemGroup>
 
 </Project>

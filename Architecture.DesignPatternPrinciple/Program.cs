@@ -9,7 +9,8 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
-using Architecture.DesignPatternPrinciple.Creational_Design_Patterns.PrototypePattern;
+using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.PrototypePattern;
+using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.SingltonPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.BridgePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
@@ -30,17 +31,25 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Prototype pattern
 
-            User adminTemplate = new User("Mohamed", "Admin", "IT");
+            //User adminTemplate = new User("Mohamed", "Admin", "IT");
 
-            // clone
-            User user1 = adminTemplate.Clone();
-            user1.Name = "Ahmed";
-         
+            //// clone
+            //User user1 = adminTemplate.Clone();
+            //user1.Name = "Ahmed";
 
-            Console.WriteLine($"{user1.Name} - {user1.Role} - {user1.Department}");
-            Console.WriteLine($"{adminTemplate.Name} - {adminTemplate.Role} - {adminTemplate.Department}");
 
-            #endregion  
+            //Console.WriteLine($"{user1.Name} - {user1.Role} - {user1.Department}");
+            //Console.WriteLine($"{adminTemplate.Name} - {adminTemplate.Role} - {adminTemplate.Department}");
+
+            #endregion
+
+            #region Singlton Pattern
+
+            Logger.Instance.Log("Starting application");
+            Logger.Instance.Log("Doing work");
+
+
+            #endregion
 
             #endregion
 

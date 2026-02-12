@@ -1,4 +1,4 @@
-﻿namespace Architecture.DesignPatternPrinciple.Creational_Design_Patterns.PrototypePattern
+﻿namespace Architecture.DesignPatternPrinciple.CreationalDesignPatterns.PrototypePattern
 {
     internal interface IPrototype<T>
     {
