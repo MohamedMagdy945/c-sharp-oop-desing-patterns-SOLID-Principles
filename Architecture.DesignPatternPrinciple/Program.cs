@@ -12,6 +12,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPatter
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.BridgePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
+using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.ProxyPattern;
 
 namespace Architecture.DesignPatternPrinciple
 {
@@ -47,16 +48,31 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Bridge Pattern
-            IDevice tv = new TV();
-            RemoteAccess remote = new RemoteAccess(tv);
-            remote.PowerOn();
+            //IDevice tv = new TV();
+            //RemoteAccess remote = new RemoteAccess(tv);
+            //remote.PowerOn();
 
-            Console.WriteLine("-----");
+            //Console.WriteLine("-----");
 
-            IDevice radio = new Radio();
-            AdvancedRemote advanced = new AdvancedRemote(radio);
-            advanced.PowerOn();
-            advanced.Mute();
+            //IDevice radio = new Radio();
+            //AdvancedRemote advanced = new AdvancedRemote(radio);
+            //advanced.PowerOn();
+            //advanced.Mute();
+            #endregion
+
+            #region Proxy Pattern
+            IImage image1 = new ProxyImage("Photo1.jpg");
+            IImage image2 = new ProxyImage("Photo2.jpg");
+
+            Console.WriteLine("Images created");
+
+            image1.Display();
+            Console.WriteLine();
+
+            image2.Display();
+            Console.WriteLine();
+
+            image1.Display();
             #endregion
 
             #endregion
