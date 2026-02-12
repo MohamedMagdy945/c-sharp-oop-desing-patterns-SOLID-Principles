@@ -90,13 +90,13 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Builder Pattern 
 
-            var juice = new JuiceBuilder()
-            .SetSize("Large")
-            .AddSugar()
-            .AddIce()
-            .Build();
+            //var juice = new JuiceBuilder()
+            //.SetSize("Large")
+            //.AddSugar()
+            //.AddIce()
+            //.Build();
 
-            juice.Show();
+            //juice.Show();
 
             #endregion
 
