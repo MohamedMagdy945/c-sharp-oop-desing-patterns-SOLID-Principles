@@ -12,6 +12,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPatter
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.BridgePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
+using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.DecoratorPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.FacadePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.FlyweightPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.ProxyPattern;
@@ -95,21 +96,33 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Facade Pattern
 
-            Amplifier amp = new Amplifier();
-            DVDPlayer dvd = new DVDPlayer();
-            Projector projector = new Projector();
+            //Amplifier amp = new Amplifier();
+            //DVDPlayer dvd = new DVDPlayer();
+            //Projector projector = new Projector();
 
-            HomeTheaterFacade homeTheater = new HomeTheaterFacade(amp, dvd, projector);
+            //HomeTheaterFacade homeTheater = new HomeTheaterFacade(amp, dvd, projector);
 
-            homeTheater.WatchMovie("Inception");
-            Console.WriteLine();
-            homeTheater.EndMovie();
+            //homeTheater.WatchMovie("Inception");
+            //Console.WriteLine();
+            //homeTheater.EndMovie();
+
+            #endregion
+
+            #region Decorator Pattern
+
+            Pizza pizza = new PlainPizza();
+
+            pizza = new CheeseDecorator(pizza);
+
+            pizza = new TomatoDecorator(pizza);
+
+            Console.WriteLine($"{pizza.GetDescription()} : ${pizza.GetCost()}");
 
             #endregion
 
             #endregion
 
-            #region Behavioral Patterns
+            #region Behavioral Design Patterns
 
             #region Memento Pattern
             //Caretaker caretaker = new Caretaker();
