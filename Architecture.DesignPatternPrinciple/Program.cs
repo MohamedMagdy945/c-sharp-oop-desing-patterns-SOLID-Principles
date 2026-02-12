@@ -9,6 +9,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
+using Architecture.DesignPatternPrinciple.Creational_Design_Patterns.PrototypePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.BridgePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
@@ -26,6 +27,21 @@ namespace Architecture.DesignPatternPrinciple
             #region Design Pattern Principles
 
             #region Creational Design Patterns  
+
+            #region Prototype pattern
+
+            User adminTemplate = new User("Mohamed", "Admin", "IT");
+
+            // clone
+            User user1 = adminTemplate.Clone();
+            user1.Name = "Ahmed";
+         
+
+            Console.WriteLine($"{user1.Name} - {user1.Role} - {user1.Department}");
+            Console.WriteLine($"{adminTemplate.Name} - {adminTemplate.Role} - {adminTemplate.Department}");
+
+            #endregion  
+
             #endregion
 
             #region Structural Design Patterns
@@ -110,13 +126,13 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Decorator Pattern
 
-            Pizza pizza = new PlainPizza();
+            //Pizza pizza = new PlainPizza();
 
-            pizza = new CheeseDecorator(pizza);
+            //pizza = new CheeseDecorator(pizza);
 
-            pizza = new TomatoDecorator(pizza);
+            //pizza = new TomatoDecorator(pizza);
 
-            Console.WriteLine($"{pizza.GetDescription()} : ${pizza.GetCost()}");
+            //Console.WriteLine($"{pizza.GetDescription()} : ${pizza.GetCost()}");
 
             #endregion
 
