@@ -10,6 +10,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPatte
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
+using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.BridgePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
 
 namespace Architecture.DesignPatternPrinciple
@@ -40,9 +41,22 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Adaptor Pattern
-            OldPaymentSystem oldSystem = new OldPaymentSystem();
-            IPayment payment = new PaymentAdapter(oldSystem);
-            payment.Pay(100);
+            //OldPaymentSystem oldSystem = new OldPaymentSystem();
+            //IPayment payment = new PaymentAdapter(oldSystem);
+            //payment.Pay(100);
+            #endregion
+
+            #region Bridge Pattern
+            IDevice tv = new TV();
+            RemoteAccess remote = new RemoteAccess(tv);
+            remote.PowerOn();
+
+            Console.WriteLine("-----");
+
+            IDevice radio = new Radio();
+            AdvancedRemote advanced = new AdvancedRemote(radio);
+            advanced.PowerOn();
+            advanced.Mute();
             #endregion
 
             #endregion
