@@ -12,6 +12,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPatter
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.BridgePattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.CompositPattern;
+using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.FlyweightPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.ProxyPattern;
 
 namespace Architecture.DesignPatternPrinciple
@@ -61,18 +62,33 @@ namespace Architecture.DesignPatternPrinciple
             #endregion
 
             #region Proxy Pattern
-            IImage image1 = new ProxyImage("Photo1.jpg");
-            IImage image2 = new ProxyImage("Photo2.jpg");
+            //IImage image1 = new ProxyImage("Photo1.jpg");
+            //IImage image2 = new ProxyImage("Photo2.jpg");
 
-            Console.WriteLine("Images created");
+            //Console.WriteLine("Images created");
 
-            image1.Display();
-            Console.WriteLine();
+            //image1.Display();
+            //Console.WriteLine();
 
-            image2.Display();
-            Console.WriteLine();
+            //image2.Display();
+            //Console.WriteLine();
 
-            image1.Display();
+            //image1.Display();
+            #endregion
+
+            #region Flyweight Pattern
+            TreeFactory factory = new TreeFactory();
+            List<Tree> forest = new List<Tree>();
+
+            forest.Add(new Tree(10, 20, factory.GetTreeType("Oak", "Green", "Rough")));
+            forest.Add(new Tree(30, 40, factory.GetTreeType("Oak", "Green", "Rough")));
+            forest.Add(new Tree(50, 60, factory.GetTreeType("Pine", "Dark Green", "Smooth")));
+
+            foreach (var tree in forest)
+            {
+                tree.Display();
+            }
+
             #endregion
 
             #endregion
