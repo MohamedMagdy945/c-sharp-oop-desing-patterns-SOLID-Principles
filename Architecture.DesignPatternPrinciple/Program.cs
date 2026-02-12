@@ -9,6 +9,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
+using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.AbstractFactoryPattern;
 using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.FactoryPattern;
 using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.PrototypePattern;
 using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.SingltonPattern;
@@ -53,15 +54,36 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Factory Pattern
 
-            NotifierFactory notifierFactory = new NotifierFactory();
-            INotifier notifier1 = notifierFactory.CreateNotifier("Email");
-            notifier1.Send("Hello Email");
+            //NotifierFactory notifierFactory = new NotifierFactory();
+            //INotifier notifier1 = notifierFactory.CreateNotifier("Email");
+            //notifier1.Send("Hello Email");
 
-            INotifier notifier2 = notifierFactory.CreateNotifier("SMS");
-            notifier2.Send("Hello SMS");
+            //INotifier notifier2 = notifierFactory.CreateNotifier("SMS");
+            //notifier2.Send("Hello SMS");
 
-            INotifier notifier3 = notifierFactory.CreateNotifier("Push");
-            notifier3.Send("Hello Push");
+            //INotifier notifier3 = notifierFactory.CreateNotifier("Push");
+            //notifier3.Send("Hello Push");
+
+            #endregion
+
+            #region Abstract Factory Pattern
+
+            IGUIFactory factory ;
+            string os = "Windows";
+
+            if (os == "Windows")
+            {
+                factory = new WindowsFactory();
+            }
+            else
+            { 
+                factory = new MacFactory();
+            }
+            var button = factory.CreateButton();
+            var textbox = factory.CreateTextbox();
+
+            button.Render();   // Render Windows Button
+            textbox.Render();  // Render Windows Textbox
 
             #endregion
 
