@@ -9,6 +9,7 @@ using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.StrategyPattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.TemplatePattern;
 using Architecture.DesignPatternPrinciple.BehavioralDesignPatterns.VisitorPattern;
+using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.FactoryPattern;
 using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.PrototypePattern;
 using Architecture.DesignPatternPrinciple.CreationalDesignPatterns.SingltonPattern;
 using Architecture.DesignPatternPrinciple.StructuralDesignPatterns.AdapterPattern;
@@ -45,9 +46,22 @@ namespace Architecture.DesignPatternPrinciple
 
             #region Singlton Pattern
 
-            Logger.Instance.Log("Starting application");
-            Logger.Instance.Log("Doing work");
+            //Logger.Instance.Log("Starting application");
+            //Logger.Instance.Log("Doing work");
 
+            #endregion
+
+            #region Factory Pattern
+
+            NotifierFactory notifierFactory = new NotifierFactory();
+            INotifier notifier1 = notifierFactory.CreateNotifier("Email");
+            notifier1.Send("Hello Email");
+
+            INotifier notifier2 = notifierFactory.CreateNotifier("SMS");
+            notifier2.Send("Hello SMS");
+
+            INotifier notifier3 = notifierFactory.CreateNotifier("Push");
+            notifier3.Send("Hello Push");
 
             #endregion
 
